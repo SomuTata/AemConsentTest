@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | AEM Cookie SDK Test</title>
+
+    <!-- ================================================================
+         ▼▼▼  COOKIE-CONSENT SDK (PLACEHOLDER — replace with real values) ▼▼▼
+         This is an ILLUSTRATIVE snippet. Replace the src + data-* values
+         with the actual embed code from your Securiti Cookie Consent
+         console (Privacy Center → Cookie Consent → Install / Embed code).
+         Keep it at the TOP of <head> so it loads before the trackers below.
+         ================================================================ -->
+    <script
+        src="https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js"
+        data-tenant-uuid="REPLACE_TENANT_UUID"
+        data-domain-uuid="REPLACE_DOMAIN_UUID"
+        data-backend-url="https://app.securiti.ai"></script>
+    <!-- ▲▲▲ Replace the line above with your real Securiti embed code ▲▲▲ -->
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Page header + Navigation (cmp-navigation) -->
+    <header class="page-header">
+        <span class="brand">VEEAM DEMO</span>
+        <nav class="cmp-navigation" aria-label="Site navigation">
+            <ul class="cmp-navigation__group">
+                <li class="cmp-navigation__item cmp-navigation__item--active"><a class="cmp-navigation__item-link" href="index.html">Home</a></li>
+                <li class="cmp-navigation__item"><a class="cmp-navigation__item-link" href="components.html">Components</a></li>
+                <li class="cmp-navigation__item"><a class="cmp-navigation__item-link" href="all-components.html">All Components</a></li>
+                <li class="cmp-navigation__item"><a class="cmp-navigation__item-link" href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb (cmp-breadcrumb) -->
+    <nav class="cmp-breadcrumb" aria-label="Breadcrumb">
+        <ol class="cmp-breadcrumb__list">
+            <li class="cmp-breadcrumb__item cmp-breadcrumb__item--active"><span class="cmp-breadcrumb__item-link">Home</span></li>
+        </ol>
+    </nav>
+
+    <main class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+
+        <!-- Title (cmp-title) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-title">
+                <h1 class="cmp-title__text">Welcome to the AEM Test Site</h1>
+            </div>
+            <div class="cmp-text">
+                <p>This page mimics AEM Core Components markup so you can validate your
+                   cookie-consent SDK against realistic <code>cmp-*</code> classes. Use the
+                   panel in the bottom-right to watch cookies appear and get blocked/allowed.</p>
+            </div>
+        </div>
+
+        <!-- Teaser grid (cmp-teaser) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-teaser">
+                <div class="cmp-teaser__image">
+                    <img src="https://picsum.photos/seed/aem1/800/360" alt="Teaser one">
+                </div>
+                <div class="cmp-teaser__content">
+                    <p class="cmp-teaser__pretitle">Privacy</p>
+                    <h2 class="cmp-teaser__title"><a class="cmp-teaser__title-link" href="components.html">Consent Management</a></h2>
+                    <div class="cmp-teaser__description"><p>Test how your SDK gates analytics and marketing cookies on this page.</p></div>
+                    <div class="cmp-teaser__action-container">
+                        <a class="cmp-teaser__action-link" href="components.html">View Components</a>
+                        <a class="cmp-teaser__action-link" href="about.html">About</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button (cmp-button) -->
+        <div class="aem-GridColumn">
+            <a class="cmp-button" href="components.html">
+                <span class="cmp-button__icon">→</span>
+                <span class="cmp-button__text">Explore all components</span>
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="page-footer">© 2026 Veeam Demo · Static AEM-style test site for cookie-consent SDK</footer>
+
+    <script src="js/components.js"></script>
+    <script src="js/demo-trackers.js"></script>
+</body>
+</html>

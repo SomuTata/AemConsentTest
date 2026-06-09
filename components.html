@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components | AEM Cookie SDK Test</title>
+
+    <!-- ================================================================
+         ▼▼▼  COOKIE-CONSENT SDK (PLACEHOLDER — replace with real values) ▼▼▼
+         Same illustrative snippet on every page. Replace src + data-* with
+         the real embed code from your Securiti Cookie Consent console.
+         ================================================================ -->
+    <script
+        src="https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js"
+        data-tenant-uuid="REPLACE_TENANT_UUID"
+        data-domain-uuid="REPLACE_DOMAIN_UUID"
+        data-backend-url="https://app.securiti.ai"></script>
+    <!-- ▲▲▲ Replace the line above with your real Securiti embed code ▲▲▲ -->
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation (cmp-navigation) -->
+    <header class="page-header">
+        <span class="brand">VEEAM DEMO</span>
+        <nav class="cmp-navigation" aria-label="Site navigation">
+            <ul class="cmp-navigation__group">
+                <li class="cmp-navigation__item"><a class="cmp-navigation__item-link" href="index.html">Home</a></li>
+                <li class="cmp-navigation__item cmp-navigation__item--active"><a class="cmp-navigation__item-link" href="components.html">Components</a></li>
+                <li class="cmp-navigation__item"><a class="cmp-navigation__item-link" href="all-components.html">All Components</a></li>
+                <li class="cmp-navigation__item"><a class="cmp-navigation__item-link" href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb (cmp-breadcrumb) -->
+    <nav class="cmp-breadcrumb" aria-label="Breadcrumb">
+        <ol class="cmp-breadcrumb__list">
+            <li class="cmp-breadcrumb__item"><a class="cmp-breadcrumb__item-link" href="index.html">Home</a></li>
+            <li class="cmp-breadcrumb__item cmp-breadcrumb__item--active"><span class="cmp-breadcrumb__item-link">Components</span></li>
+        </ol>
+    </nav>
+
+    <main class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+
+        <!-- Title -->
+        <div class="aem-GridColumn">
+            <div class="cmp-title"><h1 class="cmp-title__text">Core Components Gallery</h1></div>
+            <div class="cmp-text"><p>Every block below uses real AEM Core Component class names.</p></div>
+        </div>
+
+        <!-- Image (cmp-image) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-image">
+                <img class="cmp-image__image" src="https://picsum.photos/seed/aemimg/960/300" alt="Sample image">
+                <span class="cmp-image__title">cmp-image · responsive image component</span>
+            </div>
+        </div>
+
+        <!-- Text + heading (cmp-text) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-text">
+                <h3>Rich Text Component</h3>
+                <p>The text component renders authored rich text. Links like
+                   <a href="about.html">this internal link</a> appear inline.</p>
+            </div>
+        </div>
+
+        <!-- Separator (cmp-separator) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-separator"><hr class="cmp-separator__horizontal-rule"></div>
+        </div>
+
+        <!-- Container holding a List (cmp-container + cmp-list) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-container">
+                <div class="cmp-title"><h3 class="cmp-title__text">List Component</h3></div>
+                <ul class="cmp-list">
+                    <li class="cmp-list__item">
+                        <a class="cmp-list__item-link" href="#"><span class="cmp-list__item-title">First article</span></a>
+                        <span class="cmp-list__item-date">June 1, 2026</span>
+                    </li>
+                    <li class="cmp-list__item">
+                        <a class="cmp-list__item-link" href="#"><span class="cmp-list__item-title">Second article</span></a>
+                        <span class="cmp-list__item-date">June 5, 2026</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Accordion (cmp-accordion) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-accordion" data-cmp-is="accordion">
+                <div class="cmp-accordion__item">
+                    <h3 class="cmp-accordion__header">
+                        <button class="cmp-accordion__button" aria-expanded="true" aria-controls="acc-panel-1">
+                            <span class="cmp-accordion__title">What is consent gating?</span>
+                            <span class="cmp-accordion__icon"></span>
+                        </button>
+                    </h3>
+                    <div id="acc-panel-1" class="cmp-accordion__panel"><p>Scripts that set cookies should wait for consent.</p></div>
+                </div>
+                <div class="cmp-accordion__item">
+                    <h3 class="cmp-accordion__header">
+                        <button class="cmp-accordion__button" aria-expanded="false" aria-controls="acc-panel-2">
+                            <span class="cmp-accordion__title">How do I test it?</span>
+                            <span class="cmp-accordion__icon"></span>
+                        </button>
+                    </h3>
+                    <div id="acc-panel-2" class="cmp-accordion__panel cmp-accordion__panel--hidden"><p>Use the cookie panel bottom-right and your SDK banner.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs (cmp-tabs) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-tabs" data-cmp-is="tabs">
+                <ol class="cmp-tabs__tablist cmp-tabs__nav" role="tablist">
+                    <li class="cmp-tabs__tab cmp-tabs__tab--active" role="tab">Overview</li>
+                    <li class="cmp-tabs__tab" role="tab">Details</li>
+                    <li class="cmp-tabs__tab" role="tab">FAQ</li>
+                </ol>
+                <div class="cmp-tabs__tabpanel cmp-tabs__tabpanel--active" role="tabpanel"><p>Overview tab content.</p></div>
+                <div class="cmp-tabs__tabpanel" role="tabpanel"><p>Details tab content.</p></div>
+                <div class="cmp-tabs__tabpanel" role="tabpanel"><p>FAQ tab content.</p></div>
+            </div>
+        </div>
+
+        <!-- Carousel (cmp-carousel) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-carousel" data-cmp-is="carousel">
+                <div class="cmp-carousel__content">
+                    <div class="cmp-carousel__item cmp-carousel__item--active"><h3>Slide One</h3><p>First slide.</p></div>
+                    <div class="cmp-carousel__item"><h3>Slide Two</h3><p>Second slide.</p></div>
+                    <div class="cmp-carousel__item"><h3>Slide Three</h3><p>Third slide.</p></div>
+                </div>
+                <ol class="cmp-carousel__indicators">
+                    <li class="cmp-carousel__indicator cmp-carousel__indicator--active"></li>
+                    <li class="cmp-carousel__indicator"></li>
+                    <li class="cmp-carousel__indicator"></li>
+                </ol>
+                <div class="cmp-carousel__actions">
+                    <button class="cmp-carousel__action" data-carousel="prev">‹ Prev</button>
+                    <button class="cmp-carousel__action" data-carousel="next">Next ›</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teaser (cmp-teaser) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-teaser">
+                <div class="cmp-teaser__content">
+                    <p class="cmp-teaser__pretitle">Featured</p>
+                    <h2 class="cmp-teaser__title">Teaser Component</h2>
+                    <div class="cmp-teaser__description"><p>Promotes content with an image, title, and call to action.</p></div>
+                    <div class="cmp-teaser__action-container">
+                        <a class="cmp-teaser__action-link" href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Fragment (cmp-contentfragment) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-contentfragment">
+                <h3 class="cmp-contentfragment__title">Content Fragment</h3>
+                <div class="cmp-contentfragment__elements">
+                    <div class="cmp-contentfragment__element">
+                        <span class="cmp-contentfragment__element-title">Author</span>
+                        <p class="cmp-contentfragment__element-value">Jane Doe</p>
+                    </div>
+                    <div class="cmp-contentfragment__element">
+                        <span class="cmp-contentfragment__element-title">Summary</span>
+                        <p class="cmp-contentfragment__element-value">Structured content delivered headlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download (cmp-download) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-download">
+                <h3 class="cmp-download__title">Whitepaper.pdf</h3>
+                <p class="cmp-download__description">Download component for asset delivery.</p>
+                <div class="cmp-download__properties">
+                    <span>Size: 1.2 MB</span><span>Format: PDF</span>
+                </div>
+                <a class="cmp-download__action" href="#">Download</a>
+            </div>
+        </div>
+
+        <!-- Embed (cmp-embed) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-embed">
+                <p><strong>cmp-embed</strong> — the Embed component is where an author can paste
+                   an external snippet (e.g. a video iframe, or even your cookie-consent SDK).</p>
+            </div>
+        </div>
+
+        <!-- Search (cmp-search) -->
+        <div class="aem-GridColumn">
+            <div class="cmp-search">
+                <input class="cmp-search__input" type="search" placeholder="Search…" aria-label="Search">
+            </div>
+        </div>
+
+        <!-- Form (cmp-form, cmp-form-text, cmp-form-options, cmp-button) -->
+        <div class="aem-GridColumn">
+            <form class="cmp-form" action="#" method="post">
+                <div class="cmp-title"><h3 class="cmp-title__text">Contact Form</h3></div>
+                <div class="cmp-form-text">
+                    <label class="cmp-form-text__label" for="name">Name</label>
+                    <input class="cmp-form-text__text" id="name" name="name" type="text">
+                </div>
+                <div class="cmp-form-text">
+                    <label class="cmp-form-text__label" for="msg">Message</label>
+                    <textarea class="cmp-form-text__textarea" id="msg" name="msg" rows="3"></textarea>
+                </div>
+                <fieldset class="cmp-form-options">
+                    <legend class="cmp-form-options__legend">Contact preference</legend>
+                    <label class="cmp-form-options__field-label"><input class="cmp-form-options__field" type="radio" name="pref" checked> Email</label>
+                    <label class="cmp-form-options__field-label"><input class="cmp-form-options__field" type="radio" name="pref"> Phone</label>
+                </fieldset>
+                <button class="cmp-button" type="submit"><span class="cmp-button__text">Submit</span></button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="page-footer">© 2026 Veeam Demo · Static AEM-style test site for cookie-consent SDK</footer>
+
+    <script src="js/components.js"></script>
+    <script src="js/demo-trackers.js"></script>
+</body>
+</html>

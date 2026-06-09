@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Components | AEM Cookie SDK Test</title>
+
+    <!-- ================================================================
+         ▼▼▼  COOKIE-CONSENT SDK (PLACEHOLDER — replace with real values) ▼▼▼
+         Same illustrative snippet on every page. Replace src + data-* with
+         the real embed code from your Securiti Cookie Consent console.
+         ================================================================ -->
+    <script
+        src="https://cdn-prod.securiti.ai/consent/cookie-consent-sdk.js"
+        data-tenant-uuid="REPLACE_TENANT_UUID"
+        data-domain-uuid="REPLACE_DOMAIN_UUID"
+        data-backend-url="https://app.securiti.ai"></script>
+    <!-- ▲▲▲ Replace the line above with your real Securiti embed code ▲▲▲ -->
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <span class="brand">VEEAM DEMO</span>
+        <nav class="cmp-navigation" aria-label="Site navigation">
+            <ul class="cmp-navigation__group">
+                <li class="cmp-navigation__item cmp-navigation__item--level-0"><a class="cmp-navigation__item-link" href="index.html">Home</a></li>
+                <li class="cmp-navigation__item cmp-navigation__item--level-0"><a class="cmp-navigation__item-link" href="components.html">Components</a></li>
+                <li class="cmp-navigation__item cmp-navigation__item--level-0 cmp-navigation__item--active"><a class="cmp-navigation__item-link" href="all-components.html">All Components</a></li>
+                <li class="cmp-navigation__item cmp-navigation__item--level-0"><a class="cmp-navigation__item-link" href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="cmp-breadcrumb" aria-label="Breadcrumb">
+        <ol class="cmp-breadcrumb__list">
+            <li class="cmp-breadcrumb__item"><a class="cmp-breadcrumb__item-link" href="index.html">Home</a></li>
+            <li class="cmp-breadcrumb__item cmp-breadcrumb__item--active"><span class="cmp-breadcrumb__item-link">All Components</span></li>
+        </ol>
+    </nav>
+
+    <main class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+
+        <div class="aem-GridColumn">
+            <div class="cmp-title"><h1 class="cmp-title__text">Full Core Components Class Reference</h1></div>
+            <div class="cmp-text"><p>Every block is labelled with its AEM class. Includes sub-elements and common state/modifier classes.</p></div>
+        </div>
+
+        <!-- ============ Title ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-title / __text / __link</p>
+            <div class="cmp-title"><h2 class="cmp-title__text"><a class="cmp-title__link" href="#">Linked Title</a></h2></div>
+        </section>
+
+        <!-- ============ Text ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-text</p>
+            <div class="cmp-text"><p>Rich text with a <a href="#">link</a>, <strong>bold</strong> and <em>italic</em>.</p></div>
+        </section>
+
+        <!-- ============ Image ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-image / __link / __image / __title</p>
+            <div class="cmp-image">
+                <a class="cmp-image__link" href="#">
+                    <img class="cmp-image__image" src="https://picsum.photos/seed/refimg/960/280" alt="Reference image">
+                </a>
+                <span class="cmp-image__title">Image caption / title</span>
+            </div>
+        </section>
+
+        <!-- ============ Button (with style-system variants) ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-button / __icon / __text / --primary / --secondary</p>
+            <a class="cmp-button cmp-button--primary" href="#"><span class="cmp-button__icon">★</span><span class="cmp-button__text">Primary</span></a>
+            <a class="cmp-button cmp-button--secondary" href="#"><span class="cmp-button__text">Secondary</span></a>
+        </section>
+
+        <!-- ============ Teaser ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-teaser / __image / __content / __pretitle / __title / __title-link / __description / __action-container / __action-link</p>
+            <div class="cmp-teaser">
+                <div class="cmp-teaser__image"><img src="https://picsum.photos/seed/refteaser/800/220" alt="Teaser"></div>
+                <div class="cmp-teaser__content">
+                    <p class="cmp-teaser__pretitle">Pretitle</p>
+                    <h3 class="cmp-teaser__title"><a class="cmp-teaser__title-link" href="#">Teaser Title</a></h3>
+                    <div class="cmp-teaser__description"><p>Teaser description text.</p></div>
+                    <div class="cmp-teaser__action-container">
+                        <a class="cmp-teaser__action-link" href="#">Action One</a>
+                        <a class="cmp-teaser__action-link" href="#">Action Two</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Breadcrumb ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-breadcrumb / __list / __item / __item--active / __item-link</p>
+            <nav class="cmp-breadcrumb">
+                <ol class="cmp-breadcrumb__list">
+                    <li class="cmp-breadcrumb__item"><a class="cmp-breadcrumb__item-link" href="#">Level 1</a></li>
+                    <li class="cmp-breadcrumb__item"><a class="cmp-breadcrumb__item-link" href="#">Level 2</a></li>
+                    <li class="cmp-breadcrumb__item cmp-breadcrumb__item--active"><span class="cmp-breadcrumb__item-link">Current</span></li>
+                </ol>
+            </nav>
+        </section>
+
+        <!-- ============ Navigation (levels) ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-navigation / __group / __item / __item--level-0|1 / __item--active / __item-link</p>
+            <nav class="cmp-navigation">
+                <ul class="cmp-navigation__group">
+                    <li class="cmp-navigation__item cmp-navigation__item--level-0 cmp-navigation__item--active">
+                        <a class="cmp-navigation__item-link" href="#">Parent (active)</a>
+                        <ul class="cmp-navigation__group">
+                            <li class="cmp-navigation__item cmp-navigation__item--level-1"><a class="cmp-navigation__item-link" href="#">Child</a></li>
+                        </ul>
+                    </li>
+                    <li class="cmp-navigation__item cmp-navigation__item--level-0"><a class="cmp-navigation__item-link" href="#">Sibling</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- ============ Language Navigation ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-languagenavigation / __group / __item / __item--level-0 / __item--active / __item-title / __item-link</p>
+            <nav class="cmp-languagenavigation">
+                <ul class="cmp-languagenavigation__group">
+                    <li class="cmp-languagenavigation__item cmp-languagenavigation__item--level-0 cmp-languagenavigation__item--active">
+                        <a class="cmp-languagenavigation__item-link" href="#"><span class="cmp-languagenavigation__item-title">English</span></a>
+                    </li>
+                    <li class="cmp-languagenavigation__item cmp-languagenavigation__item--level-0">
+                        <a class="cmp-languagenavigation__item-link" href="#"><span class="cmp-languagenavigation__item-title">Deutsch</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- ============ List ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-list / __item / __item-link / __item-title / __item-date</p>
+            <ul class="cmp-list">
+                <li class="cmp-list__item">
+                    <a class="cmp-list__item-link" href="#"><span class="cmp-list__item-title">Article title</span></a>
+                    <span class="cmp-list__item-date">June 1, 2026</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ============ Separator ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-separator / __horizontal-rule</p>
+            <div class="cmp-separator"><hr class="cmp-separator__horizontal-rule"></div>
+        </section>
+
+        <!-- ============ Accordion (expanded states) ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-accordion / __item / __header / __button / __button--expanded / __title / __icon / __panel / __panel--expanded / __panel--hidden</p>
+            <div class="cmp-accordion" data-cmp-is="accordion">
+                <div class="cmp-accordion__item">
+                    <h3 class="cmp-accordion__header">
+                        <button class="cmp-accordion__button cmp-accordion__button--expanded" aria-expanded="true" aria-controls="ref-acc-1">
+                            <span class="cmp-accordion__title">Expanded item</span><span class="cmp-accordion__icon"></span>
+                        </button>
+                    </h3>
+                    <div id="ref-acc-1" class="cmp-accordion__panel cmp-accordion__panel--expanded"><p>Open panel content.</p></div>
+                </div>
+                <div class="cmp-accordion__item">
+                    <h3 class="cmp-accordion__header">
+                        <button class="cmp-accordion__button" aria-expanded="false" aria-controls="ref-acc-2">
+                            <span class="cmp-accordion__title">Collapsed item</span><span class="cmp-accordion__icon"></span>
+                        </button>
+                    </h3>
+                    <div id="ref-acc-2" class="cmp-accordion__panel cmp-accordion__panel--hidden"><p>Hidden panel content.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Tabs (tablist + nav) ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-tabs / __tablist / __nav / __tab / __tab--active / __tabpanel / __tabpanel--active</p>
+            <div class="cmp-tabs" data-cmp-is="tabs">
+                <ol class="cmp-tabs__tablist cmp-tabs__nav" role="tablist">
+                    <li class="cmp-tabs__tab cmp-tabs__tab--active" role="tab">Tab A</li>
+                    <li class="cmp-tabs__tab" role="tab">Tab B</li>
+                </ol>
+                <div class="cmp-tabs__tabpanel cmp-tabs__tabpanel--active" role="tabpanel"><p>Panel A.</p></div>
+                <div class="cmp-tabs__tabpanel" role="tabpanel"><p>Panel B.</p></div>
+            </div>
+        </section>
+
+        <!-- ============ Carousel (action variants) ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-carousel / __content / __item / __item--active / __actions / __action / __action--previous / __action--next / __action-icon / __action-text / __indicators / __indicator / __indicator--active</p>
+            <div class="cmp-carousel" data-cmp-is="carousel">
+                <div class="cmp-carousel__content">
+                    <div class="cmp-carousel__item cmp-carousel__item--active"><h3>Slide One</h3></div>
+                    <div class="cmp-carousel__item"><h3>Slide Two</h3></div>
+                </div>
+                <ol class="cmp-carousel__indicators">
+                    <li class="cmp-carousel__indicator cmp-carousel__indicator--active"></li>
+                    <li class="cmp-carousel__indicator"></li>
+                </ol>
+                <div class="cmp-carousel__actions">
+                    <button class="cmp-carousel__action cmp-carousel__action--previous" data-carousel="prev">
+                        <span class="cmp-carousel__action-icon">‹</span><span class="cmp-carousel__action-text">Previous</span>
+                    </button>
+                    <button class="cmp-carousel__action cmp-carousel__action--next" data-carousel="next">
+                        <span class="cmp-carousel__action-text">Next</span><span class="cmp-carousel__action-icon">›</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Container ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-container</p>
+            <div class="cmp-container"><p>Container wraps other components and applies layout/background.</p></div>
+        </section>
+
+        <!-- ============ Content Fragment ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-contentfragment / __title / __elements / __element / __element--multivalue / __element-title / __element-value</p>
+            <div class="cmp-contentfragment">
+                <h3 class="cmp-contentfragment__title">Author Bio</h3>
+                <div class="cmp-contentfragment__elements">
+                    <div class="cmp-contentfragment__element">
+                        <span class="cmp-contentfragment__element-title">Name</span>
+                        <p class="cmp-contentfragment__element-value">Jane Doe</p>
+                    </div>
+                    <div class="cmp-contentfragment__element cmp-contentfragment__element--multivalue">
+                        <span class="cmp-contentfragment__element-title">Tags</span>
+                        <p class="cmp-contentfragment__element-value">privacy, consent, gdpr</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Content Fragment List ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-contentfragmentlist / __item</p>
+            <div class="cmp-contentfragmentlist">
+                <article class="cmp-contentfragmentlist__item"><p>Fragment item 1</p></article>
+                <article class="cmp-contentfragmentlist__item"><p>Fragment item 2</p></article>
+            </div>
+        </section>
+
+        <!-- ============ Download ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-download / __title / __title-link / __description / __properties / __property / __property-label / __property-content / __action / __action-text</p>
+            <div class="cmp-download">
+                <h3 class="cmp-download__title"><a class="cmp-download__title-link" href="#">Report.pdf</a></h3>
+                <p class="cmp-download__description">Quarterly privacy report.</p>
+                <dl class="cmp-download__properties">
+                    <div class="cmp-download__property"><dt class="cmp-download__property-label">Size</dt><dd class="cmp-download__property-content">1.2 MB</dd></div>
+                    <div class="cmp-download__property"><dt class="cmp-download__property-label">Format</dt><dd class="cmp-download__property-content">PDF</dd></div>
+                </dl>
+                <a class="cmp-download__action" href="#"><span class="cmp-download__action-text">Download</span></a>
+            </div>
+        </section>
+
+        <!-- ============ Embed ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-embed</p>
+            <div class="cmp-embed"><p>Embed component — paste external HTML / iframe / your consent SDK snippet here.</p></div>
+        </section>
+
+        <!-- ============ Experience Fragment ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-experiencefragment / --header (variant)</p>
+            <div class="cmp-experiencefragment cmp-experiencefragment--header"><p>Reusable experience fragment (e.g. header/footer).</p></div>
+        </section>
+
+        <!-- ============ Search ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-search / __icon / __input / __clear / __clear-icon / __results / __item / __item-title / __item-mark</p>
+            <div class="cmp-search">
+                <span class="cmp-search__icon">🔍</span>
+                <input class="cmp-search__input" type="search" placeholder="Search…" aria-label="Search">
+                <button class="cmp-search__clear" aria-label="Clear"><span class="cmp-search__clear-icon">×</span></button>
+                <ul class="cmp-search__results">
+                    <li class="cmp-search__item"><a class="cmp-search__item-title" href="#">Result with <mark class="cmp-search__item-mark">match</mark></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ Form ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-form / .cmp-form-text (__label/__text/__textarea/__help-block) / .cmp-form-options (__legend/__field/__field-label/__help-message) / .cmp-form-hidden / .cmp-form-button</p>
+            <form class="cmp-form" action="#" method="post">
+                <div class="cmp-form-text">
+                    <label class="cmp-form-text__label" for="ref-name">Name</label>
+                    <input class="cmp-form-text__text" id="ref-name" name="name" type="text">
+                    <span class="cmp-form-text__help-block">Enter your full name.</span>
+                </div>
+                <div class="cmp-form-text">
+                    <label class="cmp-form-text__label" for="ref-msg">Message</label>
+                    <textarea class="cmp-form-text__textarea" id="ref-msg" name="msg" rows="3"></textarea>
+                </div>
+                <fieldset class="cmp-form-options">
+                    <legend class="cmp-form-options__legend">Preference</legend>
+                    <label class="cmp-form-options__field-label"><input class="cmp-form-options__field" type="checkbox"> Email updates</label>
+                    <label class="cmp-form-options__field-label"><input class="cmp-form-options__field" type="checkbox"> SMS updates</label>
+                    <span class="cmp-form-options__help-message">Choose any that apply.</span>
+                </fieldset>
+                <input class="cmp-form-hidden" type="hidden" name="source" value="ref">
+                <button class="cmp-form-button cmp-button" type="submit"><span class="cmp-button__text">Submit</span></button>
+            </form>
+        </section>
+
+        <!-- ============ PDF Viewer ============ -->
+        <section class="aem-GridColumn cmp-ref-section">
+            <p class="cmp-ref-label">.cmp-pdfviewer</p>
+            <div class="cmp-pdfviewer"><p>PDF viewer component placeholder (embeds Adobe PDF Embed API at runtime).</p></div>
+        </section>
+
+    </main>
+
+    <footer class="page-footer">© 2026 Veeam Demo · Full AEM Core Components class reference</footer>
+
+    <script src="js/components.js"></script>
+    <script src="js/demo-trackers.js"></script>
+</body>
+</html>

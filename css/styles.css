@@ -1,0 +1,269 @@
+/* ==================================================================
+   AEM Core Components — emulated stylesheet
+   Class names (cmp-*, aem-Grid, aem-GridColumn) mirror what AEM as a
+   Cloud Service generates, so this static site is a realistic target
+   for cookie-consent SDK testing.
+   ================================================================== */
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2933;
+    line-height: 1.5;
+    background: #f5f7fa;
+}
+a { color: #2563eb; }
+
+/* ---------- Page header + Navigation (cmp-navigation) ---------- */
+.page-header {
+    background: #0a1f44;
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page-header .brand { font-weight: 700; font-size: 18px; letter-spacing: .5px; }
+.cmp-navigation__group { list-style: none; display: flex; margin: 0; padding: 0; }
+.cmp-navigation__item { margin-left: 20px; }
+.cmp-navigation__item-link { color: #cdd9ec; text-decoration: none; font-size: 14px; }
+.cmp-navigation__item-link:hover,
+.cmp-navigation__item--active > .cmp-navigation__item-link { color: #fff; text-decoration: underline; }
+
+/* ---------- Breadcrumb (cmp-breadcrumb) ---------- */
+.cmp-breadcrumb { max-width: 960px; margin: 0 auto; padding: 14px 24px 0; }
+.cmp-breadcrumb__list { list-style: none; display: flex; gap: 8px; margin: 0; padding: 0; font-size: 13px; color: #7b8794; }
+.cmp-breadcrumb__item:not(:last-child)::after { content: "›"; margin-left: 8px; color: #9aa5b1; }
+.cmp-breadcrumb__item-link { color: #7b8794; text-decoration: none; }
+.cmp-breadcrumb__item--active { color: #1f2933; font-weight: 600; }
+
+/* ---------- Responsive grid (aem-Grid) ---------- */
+.aem-Grid { display: block; max-width: 960px; margin: 0 auto; padding: 24px; }
+.aem-GridColumn { margin-bottom: 28px; }
+
+/* ---------- Title (cmp-title) ---------- */
+.cmp-title { margin: 0 0 8px; }
+.cmp-title__text { margin: 0; font-size: 30px; line-height: 1.2; color: #0a1f44; }
+.cmp-title__link { color: inherit; text-decoration: none; }
+
+/* ---------- Text (cmp-text) ---------- */
+.cmp-text { margin: 0 0 16px; }
+.cmp-text p { margin: 0 0 12px; font-size: 16px; }
+.cmp-text h3 { color: #0a1f44; }
+
+/* ---------- Image (cmp-image) ---------- */
+.cmp-image { margin: 0 0 8px; }
+.cmp-image__image { width: 100%; border-radius: 8px; display: block; }
+.cmp-image__title { font-size: 13px; color: #7b8794; margin-top: 6px; }
+
+/* ---------- Button (cmp-button) ---------- */
+.cmp-button {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #2563eb; color: #fff; border: 0;
+    padding: 10px 18px; border-radius: 6px; font-size: 14px;
+    text-decoration: none; cursor: pointer;
+}
+.cmp-button:hover { background: #1d4ed8; }
+.cmp-button__icon { font-weight: 700; }
+
+/* ---------- Teaser (cmp-teaser) ---------- */
+.cmp-teaser {
+    background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; overflow: hidden;
+}
+.cmp-teaser__image img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.cmp-teaser__content { padding: 20px; }
+.cmp-teaser__pretitle { text-transform: uppercase; letter-spacing: .5px; font-size: 12px; color: #2563eb; margin: 0 0 6px; }
+.cmp-teaser__title { margin: 0 0 8px; font-size: 20px; color: #0a1f44; }
+.cmp-teaser__title-link { color: inherit; text-decoration: none; }
+.cmp-teaser__description { margin: 0 0 16px; color: #52606d; }
+.cmp-teaser__action-container { display: flex; gap: 10px; }
+.cmp-teaser__action-link {
+    display: inline-block; background: #2563eb; color: #fff; text-decoration: none;
+    padding: 9px 16px; border-radius: 6px; font-size: 14px;
+}
+.cmp-teaser__action-link:hover { background: #1d4ed8; }
+
+/* ---------- Container (cmp-container) ---------- */
+.cmp-container {
+    background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; padding: 24px;
+}
+
+/* ---------- List (cmp-list) ---------- */
+.cmp-list { list-style: none; margin: 0; padding: 0; }
+.cmp-list__item { border-bottom: 1px solid #e4e7eb; padding: 12px 0; }
+.cmp-list__item:last-child { border-bottom: 0; }
+.cmp-list__item-link { text-decoration: none; color: #0a1f44; font-weight: 600; }
+.cmp-list__item-title { display: block; }
+.cmp-list__item-date { font-size: 12px; color: #7b8794; }
+
+/* ---------- Separator (cmp-separator) ---------- */
+.cmp-separator { margin: 8px 0; }
+.cmp-separator__horizontal-rule { border: 0; border-top: 1px solid #cbd2d9; }
+
+/* ---------- Accordion (cmp-accordion) ---------- */
+.cmp-accordion { background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; overflow: hidden; }
+.cmp-accordion__item + .cmp-accordion__item { border-top: 1px solid #e4e7eb; }
+.cmp-accordion__header { margin: 0; }
+.cmp-accordion__button {
+    width: 100%; text-align: left; background: #fff; border: 0; padding: 16px 20px;
+    font-size: 16px; font-weight: 600; color: #0a1f44; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.cmp-accordion__button:hover { background: #f5f7fa; }
+.cmp-accordion__icon::after { content: "+"; font-size: 20px; }
+.cmp-accordion__button[aria-expanded="true"] .cmp-accordion__icon::after { content: "−"; }
+.cmp-accordion__panel { padding: 0 20px 16px; color: #52606d; }
+.cmp-accordion__panel--hidden { display: none; }
+
+/* ---------- Tabs (cmp-tabs) ---------- */
+.cmp-tabs { background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; overflow: hidden; }
+.cmp-tabs__tablist,
+.cmp-tabs__nav { list-style: none; display: flex; margin: 0; padding: 0; border-bottom: 1px solid #e4e7eb; }
+.cmp-tabs__tab { padding: 14px 20px; cursor: pointer; font-weight: 600; color: #7b8794; }
+.cmp-tabs__tab--active { color: #0a1f44; border-bottom: 2px solid #2563eb; }
+.cmp-tabs__tabpanel { padding: 20px; color: #52606d; display: none; }
+.cmp-tabs__tabpanel--active { display: block; }
+
+/* ---------- Carousel (cmp-carousel) ---------- */
+.cmp-carousel { background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; overflow: hidden; }
+.cmp-carousel__content { position: relative; }
+.cmp-carousel__item { display: none; padding: 28px; text-align: center; }
+.cmp-carousel__item--active { display: block; }
+.cmp-carousel__actions { display: flex; justify-content: space-between; padding: 0 12px 12px; }
+.cmp-carousel__action { background: #e4e7eb; border: 0; border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+.cmp-carousel__indicators { list-style: none; display: flex; gap: 6px; justify-content: center; padding: 0 0 12px; margin: 0; }
+.cmp-carousel__indicator { width: 8px; height: 8px; border-radius: 50%; background: #cbd2d9; }
+.cmp-carousel__indicator--active { background: #2563eb; }
+
+/* ---------- Content Fragment (cmp-contentfragment) ---------- */
+.cmp-contentfragment { background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; padding: 20px; }
+.cmp-contentfragment__title { margin: 0 0 12px; color: #0a1f44; }
+.cmp-contentfragment__elements { margin: 0; }
+.cmp-contentfragment__element { margin-bottom: 10px; }
+.cmp-contentfragment__element-title { font-size: 12px; text-transform: uppercase; color: #7b8794; }
+.cmp-contentfragment__element-value { margin: 0; }
+
+/* ---------- Download (cmp-download) ---------- */
+.cmp-download { background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; padding: 20px; }
+.cmp-download__title { margin: 0 0 6px; color: #0a1f44; }
+.cmp-download__description { margin: 0 0 12px; color: #52606d; }
+.cmp-download__properties { display: flex; gap: 20px; font-size: 12px; color: #7b8794; margin-bottom: 12px; }
+.cmp-download__action { display: inline-block; background: #2563eb; color: #fff; text-decoration: none; padding: 9px 16px; border-radius: 6px; }
+
+/* ---------- Embed (cmp-embed) ---------- */
+.cmp-embed { background: #fff; border: 1px dashed #9aa5b1; border-radius: 8px; padding: 20px; }
+
+/* ---------- Search (cmp-search) ---------- */
+.cmp-search { position: relative; max-width: 360px; }
+.cmp-search__input { width: 100%; padding: 10px 14px; border: 1px solid #cbd2d9; border-radius: 6px; font-size: 14px; }
+
+/* ---------- Form (cmp-form, cmp-form-text, cmp-form-options) ---------- */
+.cmp-form { background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; padding: 24px; }
+.cmp-form-text { margin-bottom: 16px; }
+.cmp-form-text__label, .cmp-form-options__legend { display: block; font-weight: 600; margin-bottom: 6px; font-size: 14px; }
+.cmp-form-text__text, .cmp-form-text__textarea {
+    width: 100%; padding: 10px 12px; border: 1px solid #cbd2d9; border-radius: 6px; font-size: 14px;
+}
+.cmp-form-options { margin-bottom: 16px; }
+.cmp-form-options__field-label { margin-right: 16px; font-size: 14px; }
+
+/* ---------- Footer ---------- */
+.page-footer { text-align: center; padding: 24px; color: #7b8794; font-size: 13px; }
+
+/* ==================================================================
+   Additional Core Components + state/modifier classes
+   (used on all-components.html)
+   ================================================================== */
+
+/* Reference labels for the class-reference page */
+.cmp-ref-section { background: #fff; border: 1px solid #e4e7eb; border-radius: 8px; padding: 18px; }
+.cmp-ref-label {
+    margin: 0 0 12px; font: 600 11px/1.4 "SFMono-Regular", Menlo, Consolas, monospace;
+    color: #2563eb; background: #eef2ff; padding: 6px 8px; border-radius: 5px; word-break: break-word;
+}
+
+/* Button variants (Style System) */
+.cmp-button--primary { background: #2563eb; }
+.cmp-button--secondary { background: #fff; color: #2563eb; border: 1px solid #2563eb; }
+.cmp-button--secondary:hover { background: #eef2ff; }
+
+/* Image link/caption */
+.cmp-image__link { display: block; }
+
+/* Navigation levels + nesting */
+.cmp-navigation__item--level-1 { padding-left: 16px; }
+.cmp-navigation__item--level-1 .cmp-navigation__item-link { color: #52606d; }
+.cmp-ref-section .cmp-navigation__group { flex-direction: column; }
+.cmp-ref-section .cmp-navigation__item { margin: 4px 0; }
+.cmp-ref-section .cmp-navigation__item-link { color: #0a1f44; }
+
+/* Language Navigation (cmp-languagenavigation) */
+.cmp-languagenavigation__group { list-style: none; display: flex; gap: 16px; margin: 0; padding: 0; }
+.cmp-languagenavigation__item-link { text-decoration: none; color: #0a1f44; }
+.cmp-languagenavigation__item--active .cmp-languagenavigation__item-title { font-weight: 700; color: #2563eb; }
+
+/* Accordion expanded states */
+.cmp-accordion__panel--expanded { display: block; }
+.cmp-accordion__button--expanded { background: #f5f7fa; }
+
+/* Carousel action variants */
+.cmp-carousel__action { display: inline-flex; align-items: center; gap: 6px; }
+.cmp-carousel__action-icon { font-weight: 700; }
+
+/* Content Fragment List */
+.cmp-contentfragmentlist { display: grid; gap: 12px; }
+.cmp-contentfragmentlist__item { background: #f5f7fa; border: 1px solid #e4e7eb; border-radius: 6px; padding: 12px; }
+
+/* Content Fragment multivalue element */
+.cmp-contentfragment__element--multivalue .cmp-contentfragment__element-value { color: #2563eb; }
+
+/* Download properties (definition list) */
+.cmp-download__properties { display: flex; gap: 24px; margin: 0 0 12px; }
+.cmp-download__property { margin: 0; }
+.cmp-download__property-label { font-size: 11px; text-transform: uppercase; color: #7b8794; }
+.cmp-download__property-content { margin: 0; font-weight: 600; }
+.cmp-download__title-link { color: #0a1f44; text-decoration: none; }
+
+/* Experience Fragment */
+.cmp-experiencefragment { background: #fff; border: 1px dashed #9aa5b1; border-radius: 8px; padding: 16px; }
+
+/* Search results + clear */
+.cmp-search__icon { position: absolute; left: 12px; top: 10px; }
+.cmp-search__input { padding-left: 36px; }
+.cmp-search__clear { position: absolute; right: 8px; top: 6px; background: transparent; border: 0; cursor: pointer; font-size: 18px; color: #7b8794; }
+.cmp-search__results { list-style: none; margin: 8px 0 0; padding: 0; border: 1px solid #e4e7eb; border-radius: 6px; }
+.cmp-search__item { padding: 10px 12px; border-bottom: 1px solid #e4e7eb; }
+.cmp-search__item:last-child { border-bottom: 0; }
+.cmp-search__item-title { text-decoration: none; color: #0a1f44; }
+.cmp-search__item-mark { background: #fde68a; padding: 0 2px; }
+
+/* Form help blocks + hidden */
+.cmp-form-text__help-block, .cmp-form-options__help-message { display: block; margin-top: 6px; font-size: 12px; color: #7b8794; }
+.cmp-form-hidden { display: none; }
+.cmp-form-options__field-label { display: inline-flex; align-items: center; gap: 6px; }
+
+/* PDF Viewer */
+.cmp-pdfviewer { background: #fff; border: 1px dashed #9aa5b1; border-radius: 8px; padding: 16px; }
+
+/* ==================================================================
+   Cookie status panel — a TESTING AID (not part of AEM).
+   Shows live document.cookie so you can SEE what your consent SDK
+   allows/blocks. Fixed bottom-right on every page.
+   ================================================================== */
+#cookie-status-panel {
+    position: fixed; bottom: 16px; right: 16px; width: 320px; max-height: 50vh; overflow: auto;
+    background: #111827; color: #d1fae5;
+    font: 12px/1.4 "SFMono-Regular", Menlo, Consolas, monospace;
+    border-radius: 8px; padding: 12px 14px; box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    z-index: 2147482000; /* below typical consent banners */
+}
+#cookie-status-panel h4 { margin: 0 0 8px; color: #fff; font-size: 13px; }
+#cookie-status-panel .cookie-row { word-break: break-all; margin-bottom: 4px; }
+#cookie-status-panel .empty { color: #9ca3af; font-style: italic; }
+#cookie-status-panel button {
+    margin: 8px 6px 0 0; background: #374151; color: #fff; border: 0;
+    padding: 6px 10px; border-radius: 5px; cursor: pointer; font-size: 11px;
+}
+#cookie-status-panel button:hover { background: #4b5563; }
